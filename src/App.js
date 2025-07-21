@@ -5,7 +5,7 @@ function App() {
 
   const sendRequest = async (state) => {
     try {
-      const response = await fetch(`http://192.168.1.16/LED=${state}`);
+      const response = await fetch(`http://192.168.1.11/LED=${state}`);
       const text = await response.text();
       console.log("ESP8266 Response:", text);
       setStatus(state);
